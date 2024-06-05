@@ -1,0 +1,37 @@
+.table-view {
+-fx-background-color:#ffffff;
+-fx-background-radius:14 14 0 0;
+-fx-border-color: #094d1f;
+-fx-border-radius: 10;
+-fx-border-width: 5;
+
+}
+.table-view .column-header-background{
+-fx-background-color: #094d1f;
+-fx-background-radius:14;
+-fx-background-insets: 0 0 10 0;
+
+}
+.table-view .column-header, .table-view .filler{
+-fx-size:50px;
+-fx-border-width: 0 0 10 0;
+-fx-background-color:transparent;
+}
+.table-view .column-header .label {
+-fx-text-fill: white ;
+}
+.button {
+-fx-background-color: #094d1f;
+-fx-text-fill: white ;
+-fx-background-radius:10;
+-fx-pref-width: 125;
+-fx-pref-height: 30;
+}
+.text-field {
+-fx-pref-width: 150;
+-fx-background-color: #ffffff; /* Set the background color */
+-fx-border-color: #000000; /* Set the border color */
+-fx-border-width: 1px; /* Set the border width */
+-fx-border-radius: 5px; /* Set the border radius */
+-fx-padding: 5px; /* Set the padding */
+}

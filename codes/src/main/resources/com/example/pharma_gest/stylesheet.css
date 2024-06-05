@@ -1,0 +1,55 @@
+.table-view {
+    -fx-background-color:#ffffff;
+    -fx-background-radius:14 14 0 0;
+    -fx-border-color: #094d1f;
+    -fx-border-radius: 10;
+    -fx-border-width: 5;}
+
+.table-view .column-header-background{
+    -fx-background-color: #094d1f;
+    -fx-background-radius:6;
+    -fx-background-insets: 0 0 10 0;}
+
+.table-view .column-header, .table-view .filler{
+    -fx-size:50px;
+    -fx-border-width: 0 0 10 0;
+    -fx-background-color:transparent;}
+
+.table-view .column-header .label {
+    -fx-text-fill: white ;}
+
+#exitButton{
+    -fx-background-color: #094d1f;
+    -fx-text-fill: white ;
+    -fx-background-radius:10;
+    -fx-pref-width: 75;
+    -fx-pref-height: 30;}
+
+#addButton, #delButton, #prtButton, #clrButton{
+    -fx-background-color: #094d1f;
+        -fx-text-fill: white ;
+        -fx-background-radius:10;
+        -fx-pref-width: 130;
+        -fx-pref-height: 50;}
+
+#totalButton{
+    -fx-background-color: #094d1f;
+        -fx-text-fill: white ;
+        -fx-background-radius:10;
+        -fx-pref-width: 160;
+        -fx-pref-height: 50;}
+
+#deconButton{
+    -fx-background-color: #094d1f;
+        -fx-text-fill: white ;
+        -fx-font-size: 15;
+        -fx-background-radius:10;
+        -fx-pref-width: 160;
+        -fx-pref-height: 50;}
+
+#affichageMedicaments, #exitButton, #leftPane{
+    -fx-background-color: #094d1f;}
+
+#tableVPane, #selectedPane, #qtyPane, #receiptPane{
+    -fx-background-color: #094d1f;
+    -fx-background-radius:10;}
