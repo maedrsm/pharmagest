@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1043.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharma_gest.FournisseurController">
+    <children>
+        <TextField fx:id="fournIdText" layoutX="515.0" layoutY="101.0" prefHeight="19.0" prefWidth="100.0" promptText="ID Fournisseur" />
+        <Label layoutX="427.0" layoutY="105.0" prefHeight="18.0" prefWidth="88.0" text="ID Fournisseur :" />
+        <TextArea fx:id="resultArea" editable="false" layoutX="430.0" layoutY="515.0" prefHeight="64.0" prefWidth="226.0" styleClass="white-textfield" wrapText="true" />
+        <Label layoutX="427.0" layoutY="475.0" prefHeight="32.0" prefWidth="70.0" text="Resultat">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="newfournisseurText" layoutX="798.0" layoutY="100.0" prefHeight="26.0" prefWidth="162.0" />
+        <ChoiceBox fx:id="updateFournisseurFieldChoiceBox" layoutX="626.0" layoutY="101.0" prefHeight="26.0" prefWidth="162.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Nouveau Nom" />
+                    <String fx:value="Nouvelle Adresse" />
+                    <String fx:value="Nouveau Contact" />
+                    <String fx:value="Nouveau Mail" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <VBox layoutX="153.0" layoutY="55.0" spacing="4.0" />
+        <TableView fx:id="fournisseurTable" editable="true" layoutX="420.0" layoutY="185.0" prefHeight="289.0" prefWidth="612.0" tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="fournIdColumn" prefWidth="56.0" text="Id" />
+                <TableColumn fx:id="fournisseurColumn" prefWidth="116.79998779296875" text="Nom" />
+                <TableColumn fx:id="addressefournColumn" prefWidth="169.5999755859375" text="Adresse" />
+                <TableColumn fx:id="contactfournColumn" prefWidth="135.99993896484375" text="Contact" />
+                <TableColumn fx:id="emailfournColumn" prefWidth="132.800048828125" text="E-mail" />
+            </columns>
+        </TableView>
+        <Button fx:id="searchFournBtn" layoutX="843.0" layoutY="139.0" mnemonicParsing="false" onAction="#searchFournisseurs" prefHeight="30.0" prefWidth="142.0" styleClass="mybutton" text="Chercher Tout" textFill="WHITE">
+            <font>
+                <Font size="11.0" />
+            </font></Button>
+        <Button fx:id="deleteFournBtn" layoutX="700.0" layoutY="140.0" mnemonicParsing="false" onAction="#supprimerFournisseur" prefHeight="32.0" prefWidth="132.0" styleClass="mybutton" text="Supprimer" textFill="WHITE" />
+        <Button fx:id="updateFournBtn" layoutX="560.0" layoutY="140.0" mnemonicParsing="false" onAction="#updateFournisseurField" prefHeight="32.0" prefWidth="132.0" styleClass="mybutton" text="Mise a jour" textFill="WHITE" />
+        <Button fx:id="searchFournsBtn" layoutX="423.0" layoutY="139.0" mnemonicParsing="false" onAction="#searchFournisseur" prefHeight="32.0" prefWidth="132.0" styleClass="mybutton" text="Rechercher" textFill="WHITE" />
+      <Pane layoutX="14.0" layoutY="19.0" prefHeight="565.0" prefWidth="155.0" styleClass="pane">
+         <children>
+            <Button layoutX="34.0" layoutY="33.0" mnemonicParsing="false" onAction="#setAdminButton" text="Dashboard" />
+            <Button layoutX="27.0" layoutY="457.0" mnemonicParsing="false" onAction="#setConnexionButton" text="Déconnexion" />
+            <Button layoutX="47.0" layoutY="501.0" mnemonicParsing="false" onAction="#setCancelButtonOnAction" text="Quitter" />
+         </children>
+      </Pane>
+      <Pane layoutX="192.0" layoutY="147.0" prefHeight="383.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 15px;">
+         <children>
+              <Label layoutX="23.0" layoutY="28.0" prefHeight="18.0" prefWidth="100.0" text="Nom Fournisseur :" />
+              <TextField fx:id="newnomfournisseurText" layoutX="21.0" layoutY="55.0" prefHeight="26.0" prefWidth="162.0" promptText="Nom" />
+              <TextField fx:id="newadressefournisseurText" layoutX="21.0" layoutY="121.0" prefHeight="26.0" prefWidth="162.0" promptText="Adresse" />
+              <TextField fx:id="newcontactfournisseurText" layoutX="21.0" layoutY="184.0" prefHeight="26.0" prefWidth="162.0" promptText="Contact" />
+              <TextField fx:id="newmailfournisseurText" layoutX="21.0" layoutY="248.0" prefHeight="26.0" prefWidth="162.0" promptText="Mail" />
+              <Label layoutX="23.0" layoutY="89.0" prefHeight="32.0" prefWidth="117.0" text="Adresse Fournisseur :" />
+              <Label layoutX="17.0" layoutY="157.0" text="Contact Fournisseur :" />
+              <Label layoutX="23.0" layoutY="220.0" prefHeight="18.0" prefWidth="100.0" text="Mail Fournisseur :" />
+              <Button fx:id="addFournBtn" layoutX="26.0" layoutY="290.0" mnemonicParsing="false" onAction="#insertFournisseur" prefHeight="19.0" prefWidth="142.0" styleClass="mybutton" text="Ajouter Fournisseur" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Text layoutX="216.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Fournisseur">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Text>
+      <Label fx:id="nameLabel" layoutX="914.0" layoutY="59.0" text="Identifiant" />
+    </children>
+   <stylesheets>
+      <URL value="@tableview.css" />
+      <URL value="@caisse.css" />
+   </stylesheets>
+</AnchorPane>

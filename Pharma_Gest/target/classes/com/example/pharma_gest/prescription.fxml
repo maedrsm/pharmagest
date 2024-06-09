@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="265.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharma_gest.PrescriptionController">
+   <children>
+      <TextField fx:id="medecin" layoutX="148.0" layoutY="64.0" />
+      <TextField fx:id="patient" layoutX="148.0" layoutY="108.0" />
+      <DatePicker fx:id="date_issue" layoutX="148.0" layoutY="158.0" />
+      <Button fx:id="annuler" layoutX="304.0" layoutY="214.0" mnemonicParsing="false" text="Annuler" />
+      <Button fx:id="valider" layoutX="379.0" layoutY="214.0" mnemonicParsing="false" onAction="#insertPrescription" text="Valider" />
+      <Text layoutX="196.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRESCRIPTION" />
+      <Text layoutX="72.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medecin" />
+      <Text layoutX="72.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date d'issue" />
+      <Text layoutX="72.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient" />
+   </children>
+</Pane>

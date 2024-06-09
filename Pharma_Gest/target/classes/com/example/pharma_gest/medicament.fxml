@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="medicaments" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharma_gest.MedicamentController">
+    <children>
+        <TextArea fx:id="selectedItem" layoutX="27.0" layoutY="395.0" prefHeight="95.0" prefWidth="239.0" />
+        <TextField fx:id="chercheID" layoutX="452.0" layoutY="35.0" onAction="#chercheMedicament" prefHeight="30.0" prefWidth="117.0" />
+        <TableView fx:id="infosMedicaments" layoutX="293.0" layoutY="82.0" prefHeight="408.0" prefWidth="617.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="33.60003662109375" text="id" />
+                <TableColumn fx:id="name" prefWidth="103.199951171875" text="name" />
+                <TableColumn fx:id="prix" prefWidth="63.20001220703125" text="prix" />
+                <TableColumn fx:id="forme" prefWidth="96.0" text="forme" />
+                <TableColumn fx:id="quantite" prefWidth="64.0" text="quantite" />
+                <TableColumn fx:id="seuil" prefWidth="51.20001220703125" text="seuil" />
+                <TableColumn fx:id="prescription" prefWidth="84.79998779296875" text="prescription" />
+                <TableColumn fx:id="fournisseur" minWidth="0.0" prefWidth="84.7999267578125" text="fournisseur" />
+                <TableColumn fx:id="statut_commande" prefWidth="100.0001220703125" text="statut_commande" />
+            </columns>
+        </TableView>
+        <Button fx:id="rechercher" layoutX="594.0" layoutY="38.0" mnemonicParsing="false" onAction="#chercheMedicament" prefHeight="25.0" prefWidth="73.0" text="Recherche" />
+        <Button fx:id="afficherTout" layoutX="694.0" layoutY="38.0" mnemonicParsing="false" onAction="#afficherMedicament" prefHeight="25.0" prefWidth="171.0" text="Afficher Tous Medicaments" />
+        <Button fx:id="supprimer" layoutX="201.0" layoutY="347.0" mnemonicParsing="false" onAction="#supprimerMedicament" prefHeight="25.0" prefWidth="73.0" text="Supprimer" />
+        <Button fx:id="modifier" layoutX="110.0" layoutY="347.0" mnemonicParsing="false" onAction="#modifierMedicament" prefHeight="25.0" prefWidth="73.0" text="Modifier" />
+        <Text layoutX="385.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identifiant" />
+        <TextField fx:id="insertNomMed" layoutX="111.0" layoutY="58.0" prefHeight="30.0" prefWidth="163.0" />
+        <TextField fx:id="insertPrixMed" layoutX="111.0" layoutY="98.0" prefHeight="30.0" prefWidth="163.0" />
+        <TextField fx:id="insertQteMed" layoutX="111.0" layoutY="138.0" prefHeight="30.0" prefWidth="77.0" />
+        <TextField fx:id="insertFormeMed" layoutX="111.0" layoutY="178.0" prefHeight="30.0" prefWidth="163.0" />
+        <TextField fx:id="insertSeuilMed" layoutX="109.0" layoutY="221.0" prefHeight="30.0" prefWidth="163.0" />
+        <Text layoutX="21.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom (mg)" />
+        <Text layoutX="19.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forme" />
+        <Text layoutX="21.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prescription" />
+        <Text layoutX="25.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix de vente" />
+        <Text layoutX="21.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantite/ Max" />
+        <Text layoutX="17.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seuil" wrappingWidth="33.673828125" />
+        <CheckBox fx:id="insertPresMed" layoutX="114.0" layoutY="264.0" mnemonicParsing="false" />
+        <TextField fx:id="insertQteMaxMed" layoutX="197.0" layoutY="139.0" prefHeight="30.0" prefWidth="77.0" />
+        <Button fx:id="addMedicament" layoutX="20.0" layoutY="347.0" mnemonicParsing="false" onAction="#insertMedicament" prefHeight="25.0" prefWidth="73.0" text="Ajouter" />
+        <TextField fx:id="insertFournisseur" layoutX="114.0" layoutY="291.0" prefHeight="30.0" prefWidth="163.0" />
+        <Text layoutX="22.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fournisseur" />
+        <Text layoutX="138.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEDICAMENT" />
+    </children>
+</Pane>

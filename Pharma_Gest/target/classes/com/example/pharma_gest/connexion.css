@@ -1,0 +1,36 @@
+
+
+/* Styling for the Pane */
+.pane {
+    -fx-background-color: #f5ede4; /* White */
+}
+
+/* Styling for the Text */
+
+
+/* Styling for the TextField and PasswordField */
+.text-field, .password-field {
+    -fx-prompt-text-fill: #6c757d; /* Gray */
+    -fx-background-color: #f8f9fa; /* Light gray */
+    -fx-border-width: 1px;
+    -fx-border-color: #ced4da; /* Light gray */
+    -fx-background-radius: 15px; /* Border radius */
+    -fx-border-radius: 15px; /* Border radius */
+    -fx-pref-width: 207px;
+    -fx-pref-height: 35px;
+}
+
+.button {
+    -fx-background-color: #70b489;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-pref-height: 35px;
+    -fx-background-radius: 15px; /* Border radius */
+    -fx-border-radius: 15px; /* Border radius */
+}
+
+/* Styling for the Label */
+.label {
+    -fx-text-fill: #495057; /* Dark gray */
+}

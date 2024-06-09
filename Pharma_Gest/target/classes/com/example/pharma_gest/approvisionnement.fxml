@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharma_gest.ApprovisionnementController">
+   <children>
+      <TextField fx:id="medicNameText" layoutX="222.0" layoutY="149.0" prefHeight="26.0" prefWidth="210.0" promptText="Nom du Medicament" />
+      <Label layoutX="222.0" layoutY="122.0" text="Chercher" />
+      <VBox layoutX="97.0" layoutY="24.0" spacing="4.0" />
+      <VBox layoutX="9.0" layoutY="28.0" prefWidth="67.0" spacing="12.0" />
+      <TableView fx:id="medicamentTable" editable="true" layoutX="222.0" layoutY="192.0" prefHeight="222.0" prefWidth="645.0" tableMenuButtonVisible="true">
+         <placeholder>
+            <Label fx:id="tableLabel" text="" />
+         </placeholder>
+         <columns>
+            <TableColumn fx:id="idMedicColumn" prefWidth="49.60003662109375" text="Id" />
+            <TableColumn fx:id="nameColumn" prefWidth="91.199951171875" text="Nom" />
+            <TableColumn fx:id="prixUnitaireAchatColumn" prefWidth="72.0" text="Prix " />
+            <TableColumn fx:id="quantiteColumn" prefWidth="84.80001831054688" text="Quantité" />
+            <TableColumn fx:id="quantiteMaxColumn" prefWidth="95.20001220703125" text="Quantité Max" />
+            <TableColumn fx:id="quantiteCommanderColumn" prefWidth="125.5999755859375" text="Quantité Commander" />
+            <TableColumn fx:id="prescriptionColumn" minWidth="0.0" prefWidth="0.0" text="Prescription" />
+            <TableColumn fx:id="prixHabituelColumn" minWidth="0.0" prefWidth="99.2000732421875" text="Prix Habituel" />
+            <TableColumn fx:id="seuilCommandeColumn" minWidth="4.0" prefWidth="123.199951171875" text="Seuil Commande" />
+         </columns>
+      </TableView>
+      <Button fx:id="searchEmpsBtn" layoutX="450.0" layoutY="145.0" mnemonicParsing="false" onAction="#searchMedicaments" prefHeight="25.0" prefWidth="139.0" text="Chercher" />
+      <TextField fx:id="quantiteACommander" layoutX="222.0" layoutY="531.0" promptText="Entrer la Quantité" />
+      <Text layoutX="221.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantité à Commander :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="402.0" layoutY="527.0" mnemonicParsing="false" onAction="#setQuantiteACommander" prefWidth="108.0" text="Confirmer" />
+      <Pane layoutX="20.0" layoutY="21.0" prefHeight="565.0" prefWidth="155.0" styleClass="pane">
+         <children>
+            <Button layoutX="8.0" layoutY="27.0" mnemonicParsing="false" onAction="#setDashboardButton" prefHeight="26.0" prefWidth="139.0" text="Dashboard" />
+            <Button layoutX="47.0" layoutY="497.0" mnemonicParsing="false" onAction="#setCancelButtonOnAction" text="Quitter" />
+            <Button layoutX="31.0" layoutY="462.0" mnemonicParsing="false" onAction="#setConnexionButton" text="Déconexion" />
+         </children>
+      </Pane>
+      <Text layoutX="215.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Approvisionnement">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Text>
+      <Label fx:id="nameLabel" layoutX="776.0" layoutY="63.0" text="Identifiant" />
+
+   </children>
+   <stylesheets>
+      <URL value="@tableview.css" />
+      <URL value="@caisse.css" />
+   </stylesheets>
+</AnchorPane>

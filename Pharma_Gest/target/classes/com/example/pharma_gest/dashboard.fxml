@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="" prefHeight="600.0" prefWidth="900.0" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharma_gest.DashboardController">
+    <children>
+        <Label fx:id="nameLabel" layoutX="783.0" layoutY="60.0" prefHeight="27.0" prefWidth="65.0" text="Identifiant" />
+        <Pane layoutX="14.0" layoutY="19.0" prefHeight="565.0" prefWidth="155.0" styleClass="pane">
+            <children>
+                <Button fx:id="cancelButton" layoutX="45.0" layoutY="503.0" mnemonicParsing="false" onAction="#setCancelButtonOnAction" text="Quitter " />
+                <Button layoutX="34.0" layoutY="37.0" mnemonicParsing="false" onAction="#setConnexionButton" text="Connexion" />
+            </children>
+        </Pane>
+        <Text layoutX="215.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="154.632080078125">
+            <font>
+                <Font name="Arial Bold" size="23.0" />
+            </font>
+        </Text>
+      <Pane layoutX="194.0" layoutY="115.0" prefHeight="199.0" prefWidth="199.0" styleClass="options">
+         <children>
+            <Text layoutX="25.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vente" />
+            <Text layoutX="21.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des ventes de médicaments aux clients avec un recu." wrappingWidth="158.5095703125" />
+                <Button layoutX="21.0" layoutY="153.0" mnemonicParsing="false" onAction="#setMedicamentButton" prefHeight="26.0" prefWidth="96.0" styleClass="bouton-consulter" text="Consulter" />
+            <ImageView fitHeight="34.0" fitWidth="48.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-pills-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="422.0" layoutY="115.0" prefHeight="199.0" prefWidth="199.0" styleClass="options">
+         <children>
+            <Text layoutX="25.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Caisse" />
+            <Text layoutX="21.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suivre les transactions financières et gérer les paiements." wrappingWidth="158.5095703125" />
+            <Button layoutX="21.0" layoutY="153.0" mnemonicParsing="false" onAction="#setCaisseButton" prefHeight="26.0" prefWidth="96.0" styleClass="bouton-consulter" text="Consulter" />
+            <ImageView fitHeight="34.0" fitWidth="48.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-health-book-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="650.0" layoutY="115.0" prefHeight="199.0" prefWidth="199.0" styleClass="options">
+         <children>
+            <Text layoutX="25.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Approvisionnement" />
+            <Text layoutX="21.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gérer les stocks de médicaments et passer des commandes aux fournisseurs." wrappingWidth="158.5095703125" />
+            <Button layoutX="21.0" layoutY="153.0" mnemonicParsing="false" onAction="#setApprovisionnementButton" prefHeight="26.0" prefWidth="96.0" styleClass="bouton-consulter" text="Consulter" />
+            <ImageView fitHeight="34.0" fitWidth="48.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-hand-with-a-pill-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="194.0" layoutY="343.0" prefHeight="199.0" prefWidth="199.0" styleClass="options">
+         <children>
+            <Text layoutX="25.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Création Commande" />
+            <Text layoutX="21.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passer des commandes de produits aux fournisseurs." wrappingWidth="158.5095703125" />
+            <Button layoutX="21.0" layoutY="153.0" mnemonicParsing="false" onAction="#setCreationCommande" prefHeight="26.0" prefWidth="96.0" styleClass="bouton-consulter" text="Consulter" />
+            <ImageView fitHeight="34.0" fitWidth="48.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-health-graph-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="422.0" layoutY="343.0" prefHeight="199.0" prefWidth="199.0" styleClass="options">
+         <children>
+            <Text layoutX="25.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Commande" />
+            <Text layoutX="21.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recevoir et vérifier les livraisons des fournisseurs." wrappingWidth="158.5095703125" />
+            <Button layoutX="21.0" layoutY="153.0" mnemonicParsing="false" onAction="#setReceptionCommande" prefHeight="26.0" prefWidth="96.0" styleClass="bouton-consulter" text="Consulter" />
+            <ImageView fitHeight="34.0" fitWidth="48.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-weight-care-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="650.0" layoutY="343.0" prefHeight="199.0" prefWidth="199.0" styleClass="options">
+         <children>
+            <Text layoutX="25.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRUD" />
+            <Text layoutX="21.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion de base de données : création, mise à jour et suppression des informations." wrappingWidth="158.5095703125" />
+            <Button layoutX="21.0" layoutY="153.0" mnemonicParsing="false" onAction="#setAdminButton" prefHeight="26.0" prefWidth="96.0" styleClass="bouton-consulter" text="Consulter" />
+            <ImageView fitHeight="34.0" fitWidth="48.0" layoutX="22.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8-pharmacist-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

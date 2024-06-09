@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pharma_gest.RecuController">
+    <children>
+        <TextField fx:id="recuIdText" layoutX="206.0" layoutY="112.0" prefHeight="26.0" prefWidth="120.0" promptText="Checher Recu ID" />
+        <Button fx:id="searchRecuBtn" layoutX="343.0" layoutY="110.0" mnemonicParsing="false" onAction="#searchRecu" prefHeight="26.0" prefWidth="120.0" style="-fx-pref-width: 125; -fx-pref-height: 30;" text="Chercher" />
+        <VBox layoutX="97.0" layoutY="24.0" spacing="4.0" />
+      <Pane layoutX="14.0" layoutY="19.0" prefHeight="565.0" prefWidth="155.0" styleClass="pane">
+         <children>
+            <Button layoutX="34.0" layoutY="37.0" mnemonicParsing="false" onAction="#setDashboardButton" prefHeight="68.0" prefWidth="83.0" text="Dashboad" />
+            <Button layoutX="45.0" layoutY="503.0" mnemonicParsing="false" onAction="#setCancelButtonOnAction" text="Quitter" />
+            <Button layoutX="27.0" layoutY="460.0" mnemonicParsing="false" onAction="#setConnexionButton" prefWidth="101.0" text="Déconnexion" />
+         </children></Pane>
+      <Text fx:id="total" layoutX="269.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Montant" wrappingWidth="83.20000000000005">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="montantText" layoutX="221.0" layoutY="526.0" promptText="Entrer Montant Donnée" />
+      <Button layoutX="394.0" layoutY="522.0" mnemonicParsing="false" onAction="#paiementRecu" prefWidth="120.0" text="Confirmer" />
+      <Text layoutX="215.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Caisse">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Text>
+      <Label fx:id="nameLabel" layoutX="892.0" layoutY="85.0" prefHeight="18.0" prefWidth="83.0" text="Identifiant" />
+      <Text layoutX="221.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total : " wrappingWidth="61.21367187499999">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Pane layoutX="202.0" layoutY="168.0" prefHeight="290.0" prefWidth="236.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: green; -fx-border-radius: 10px;">
+         <children>
+            <TableView fx:id="recuTable" editable="true" layoutX="17.0" layoutY="44.0" prefHeight="234.0" prefWidth="204.0" stylesheets="@tableview.css">
+                <placeholder>
+                    <Label fx:id="tableRecuLabel" text="" />
+                </placeholder>
+                <columns>
+                  <TableColumn fx:id="idRecuColumn" prefWidth="75.19998168945312" text="Id" />
+                  <TableColumn fx:id="totalRecuColumn" minWidth="0.0" prefWidth="118.4000244140625" text="Montant Total" />
+                  <TableColumn fx:id="vendeurColumn" minWidth="0.0" prefWidth="0.0" text="Vendeur" />
+                  <TableColumn fx:id="statutColumn" minWidth="0.0" prefWidth="0.0" text="Statut" />
+               </columns>
+            </TableView>
+            <Text fill="#666161" layoutX="29.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sélectionnez un recu">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="454.0" layoutY="168.0" prefHeight="290.0" prefWidth="522.0" style="-fx-background-color: #fffff; -fx-background-radius: 10px; -fx-border-color: green; -fx-border-radius: 10px;">
+         <children>
+              <TableView fx:id="recuDetailsTable" editable="true" layoutX="18.0" layoutY="42.0" prefHeight="234.0" prefWidth="486.0" stylesheets="@tableview.css">
+                  <placeholder>
+                      <Label fx:id="tableRecuDetailsLabel" text="" />
+                  </placeholder>
+                  <columns>
+                      <TableColumn fx:id="idRecuDetailsColumn" prefWidth="57.0" text="Id" />
+                      <TableColumn fx:id="nomMedicamentColumn" prefWidth="115.19998168945312" text="Nom Médicament" />
+                      <TableColumn fx:id="prixMedicamentColumn" prefWidth="105.60002136230469" text="Prix Médicament" />
+                      <TableColumn fx:id="quantiteMedicamentColumn" minWidth="8.0" prefWidth="136.0" text="Quantité Médicament" />
+                      <TableColumn fx:id="totalColumn" minWidth="3.199951171875" prefWidth="51.199951171875" text="Total" />
+                  </columns>
+              </TableView>
+            <Text fill="#666161" layoutX="30.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Détails du recu : ">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+    </children>
+   <stylesheets>
+      <URL value="@tableview.css" />
+      <URL value="@dashboard.css" />
+      <URL value="@caisse.css" />
+   </stylesheets>
+</AnchorPane>

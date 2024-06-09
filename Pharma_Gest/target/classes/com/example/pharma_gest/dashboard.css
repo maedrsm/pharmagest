@@ -1,0 +1,41 @@
+
+
+.archor-pane {
+
+    -fx-background-color: #ecedf1;
+}
+
+
+.button {
+    -fx-background-color: #70b489; /* Green */
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-background-radius: 15px; /* Border radius */
+    -fx-border-radius: 15px; /* Border radius */
+}
+
+
+.pane {
+
+    -fx-background-radius: 15px; /* Border radius */
+    -fx-border-radius: 15px; /* Border radius */
+    -fx-background-color: #70b489; /* Green */
+}
+
+.options {
+
+    -fx-background-radius: 15px; /* Border radius */
+    -fx-border-radius: 15px; /* Border radius */
+    -fx-background-color: white; /* Green */
+
+}
+
+.bouton-consulter {
+
+    -fx-text-fill: #6c757d; /* Gray */
+    -fx-background-color: #f8f9fa; /* Light gray */
+    -fx-background-radius: 5px; /* Border radius */
+
+
+}
